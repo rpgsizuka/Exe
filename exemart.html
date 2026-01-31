@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exe Mart | Pay</title>
+  <style>
+    body{font-family:Arial;background:#f5f5f5;text-align:center}
+    .box{
+      background:#fff;
+      width:300px;
+      margin:50px auto;
+      padding:20px;
+      border-radius:10px;
+    }
+    img{width:220px}
+    button{
+      padding:10px 15px;
+      background:#00ffcc;
+      border:none;
+      font-weight:bold;
+      cursor:pointer;
+      margin-top:10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Exe Mart Payment</h2>
+  <p>Amount: ₹<span id="amount">1999</span></p>
+
+  <!-- Backend QR -->
+  <img id="qr" src="http://localhost:3000/upi-qr?amount=1999">
+
+  <p>Scan using PhonePe / GPay</p>
+  <button onclick="done()">Payment Done</button>
+</div>
+
+<script>
+function done(){
+  alert("Payment submitted. Admin will verify.");
+}
+</script>
+
+</body>
+</html>
